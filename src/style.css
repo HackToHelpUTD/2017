@@ -6,21 +6,33 @@
 	padding: 0;
 }
 
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
 body {
 	font-family: "Roboto Slab", serif;
 	font-weight: 300;
 }
 
 .container {
-	margin: 1rem 3rem 2rem 3rem;
+	margin: 0 3rem;
+	position: relative;
 	text-align: center;
+	height: 100%;
 }
 
-h1 {
+.title {
+	padding-top: 1rem;
+}
+
+.title h1 {
 	font-size: 2rem;
 }
 
-p {
+.title p {
 	font-size: 1.3rem;
 }
 
@@ -30,7 +42,6 @@ img.circle {
   width: 100%;
   margin: 1rem;
 	animation: float 2s infinite ease-in-out;
-	filter: grayscale(100%);
 	display: inline-flex;
 	width: 10rem;
 	height: 10rem;
@@ -57,34 +68,84 @@ figcaption {
 }
 
 .students {
-	margin-top: 2rem;
-  text-align: center;
+	margin: 2rem 100px 0 100px;
+	padding-bottom: 3rem;
+	text-align: center;
 }
 
 .students > div {
 	display: inline-flex;
 }
 
-@keyframes float {
-0% {
-		transform: translateY(0%);
-	}
-	50% {
-		transform: translateY(-2%);
-	}
-	100% {
-		transform: translateY(0%);
-	}
+.students div {
+	height: 150px;
+	width: 150px;
+	margin: 25px;
+	border-radius: 100%;
+	transition: ease-in-out;
+	transition-duration: .3s;
 }
-	
-@-webkit-keyframes float {
-  0% {
-		transform: translateY(0%);
-	}
-	50% {
-		transform: translateY(-2%);
-	}
-	100% {
-		transform: translateY(0%);
+
+.students div figure img {
+	width: 150px;
+}
+
+.students div:hover {
+	transform: scale(1.05);
+}
+
+.students div:nth-child(1) {
+	background: #3F51B5;
+}
+
+.students div:nth-child(2) {
+	background: #2196F3;
+}
+
+.students div:nth-child(3) {
+	background: #4CAF50;
+}
+
+.students div:nth-child(4) {
+	background: #FFC107;
+}
+
+.students div:nth-child(5) {
+	background: #9C27B0;
+}
+
+.students div:nth-child(6) {
+	background: #E91E63;
+}
+
+.students div:nth-child(7) {
+	background: #CDDC39;
+}
+
+.students div:nth-child(8) {
+	background: #F44336;
+}
+
+.footer {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	padding-bottom: 2rem;
+}
+
+.footer p {
+	font-size: 1rem;
+	text-align: center;
+}
+
+.footer a {
+	color: inherit;
+	text-decoration: soild;
+}
+
+@media (max-width: 500px) {
+	.students {
+		margin-right: 1rem;
+		margin-left: 1rem;
 	}
 }
